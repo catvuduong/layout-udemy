@@ -1,0 +1,14 @@
+.btn--white {
+    @include button($color-gray-4, $color-gray-2, $color-white-0, $fw-bold-0, $color-gray-1);
+}
+.btn--red {
+    @include button($color-white-0, $color-red-0, $color-red-0, $fw-bold-0, $color-red-1);
+}
+.btn--personal {
+    @include text($color-white-0, 18px, $fw-bold);
+    margin-top: 10px;
+    padding: $pd-1 $pd-1;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+}

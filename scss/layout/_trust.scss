@@ -1,0 +1,29 @@
+.myTrust {
+    margin: 70px 0;
+    padding: 30px 0;
+    border: 1px solid rgba($color: gray, $alpha: 0.3);
+    border-left: none;
+    border-right: none;
+    .trust_content {
+        width: 37%;
+        margin: auto;
+        text-align: center;
+        h3 {
+            @include text($color-black-0, 25px, $fw-bold);
+        }
+        .trust_item {
+            padding-top: $pd-2;
+            img {
+                padding: 0 15px;
+            }
+        }
+    }
+}
+@include respond-to("large") {
+    .myTrust {
+        display: none;
+        .trust_content {
+            width: 60%;
+        }
+    }
+}

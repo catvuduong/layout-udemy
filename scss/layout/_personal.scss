@@ -1,0 +1,34 @@
+.myPersonal {
+    height: 200px;
+    width: 100%;
+    background-image: url("./../../img/purple-intersect.svg");
+    margin-top: 70px;
+    background-color: #6e1a52;
+    .personal_content {
+        padding-top: 40px;
+        text-align: center;
+        width: 60%;
+        margin: auto;
+        h1 {
+            @include text($color-white-0, 32px, $fw-bold);
+        }
+        h4 {
+            @include text($color-white-0, $fs-2, $fw-normal);
+        }
+    }
+    @include respond-to("large") {
+        .personal_content {
+            h1 {
+                font-size: $fs-3;
+            }
+            .btn--personal {
+                outline: none;
+            }
+        }
+    }
+    @include respond-to("medium") {
+        .personal_content {
+            padding-top: 25px;
+        }
+    }
+}

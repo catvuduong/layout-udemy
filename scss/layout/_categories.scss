@@ -1,0 +1,31 @@
+.myCategories {
+    .categories_content {
+        width: 70%;
+        margin: auto;
+        margin-top: 50px;
+        h3 {
+            @include text($color-black-0, $fs-3, $fw-bold);
+        }
+        .categories_group {
+            margin-top: $mg-1;
+            .categories_item {
+                padding-bottom: 45px;
+                padding-right: 0;
+                cursor: pointer;
+                img {
+                    height: 445px;
+                    width: 100%;
+                    border: 1px dotted rgba(128, 128, 128, 0.5);
+                    padding-bottom: 75px;
+                    position: relative;
+                }
+                h4 {
+                    @include text($color-black-0, $fs-2, $fw-bold);
+                    position: absolute;
+                    left: 30px;
+                    bottom: 75px;
+                }
+            }
+        }
+    }
+}

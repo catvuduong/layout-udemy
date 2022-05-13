@@ -1,0 +1,122 @@
+.myNavBar {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background-color: $color-white-0;
+    transition: all 1s;
+    &.headerClass {
+        border-bottom: 5px solid $color-red-0;
+    }
+    .navbar-brand {
+        flex-grow: 1;
+        img {
+            width: 110px;
+        }
+    }
+    .categories {
+        flex-grow: 1;
+        @include text($color-black-light, $fs-1, $fw-normal);
+        align-self: center;
+    }
+    .input_search {
+        flex-grow: 5;
+        .form-control {
+            background-color: $color-gray-1;
+            border: none;
+            transition: none;
+            &:focus {
+                box-shadow: none;
+                background-color: $color-white-0;
+                border-top: 1px solid $color-gray-3;
+                border-left: 1px solid $color-gray-3;
+                border-bottom: 1px solid $color-gray-3;
+            }
+            &:focus + .input-group-prepend {
+                .input-group-text {
+                    color: $color-red-0;
+                    background-color: $color-white-0;
+                    border-top: 1px solid $color-gray-3;
+                    border-right: 1px solid $color-gray-3;
+                    border-bottom: 1px solid $color-gray-3;
+                }
+                &:hover {
+                    .input-group-text {
+                        color: $color-white-0;
+                        background-color: $color-red-0;
+                    }
+                }
+            }
+        }
+        .input-group-prepend {
+            .input-group-text {
+                background-color: $color-gray-1;
+                color: $color-red-0;
+                border: none;
+            }
+            &:hover {
+                .input-group-text {
+                    color: $color-white-0;
+                    background-color: $color-red-0;
+                }
+            }
+        }
+    }
+    .navbar-nav {
+        justify-content: space-between;
+        width: 100%;
+        .nav-item {
+            .nav-link {
+                @include text($color-black-light, $fs-1, $fw-normal);
+                padding: $pd-1, $pd-2;
+            }
+            &:hover {
+                background-color: $color-gray-1;
+            }
+        }
+        .nav-item:nth-child(3) {
+            border-radius: 50%;
+            line-height: 20px;
+            .nav-link {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+    @include respond-to("extra-large") {
+        .navbar_fix {
+            padding: 0;
+            .navbar-nav {
+                justify-content: flex-start;
+                .business,
+                .instructor {
+                    display: none !important;
+                }
+                .nav-item:nth-child(3) {
+                    margin: 3px;
+                }
+            }
+        }
+    }
+    @include respond-to("medium") {
+        .navbar {
+            .categories,
+            .input_search {
+                display: none;
+            }
+            .nav_toggler_button {
+                max-width: 11%;
+            }
+        }
+        .navbar-nav {
+            flex-direction: row;
+            padding-top: 8px;
+        }
+    }
+    @include respond-to("small") {
+        .navbar {
+            .nav_toggler_button {
+                max-width: 12%;
+            }
+        }
+    }
+}

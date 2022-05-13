@@ -1,0 +1,64 @@
+.myInstrutor {
+    margin-top: 30px;
+    position: relative;
+    .instructor_content {
+        width: 60%;
+        margin: auto;
+        .instructor_text {
+            padding-top: 100px;
+            h4 {
+                @include text($color-black-0, 30px, $fw-bold);
+            }
+            p {
+                @include text($color-black-0, 18px, $fw-normal);
+                width: 75%;
+            }
+            button {
+                @include text($color-white-0, $fs-0, $fw-bold);
+                padding: 10px 20px;
+                background-color: #0f7c90;
+                border-radius: 5px;
+                border: none;
+                &:hover {
+                    background-color: $color-black-0;
+                }
+            }
+        }
+    }
+    .instructor_layout {
+        position: absolute;
+        background-color: #fbfbf8;
+        height: 300px;
+        width: 100%;
+        bottom: 35px;
+        left: 0;
+        z-index: -1;
+    }
+    @include respond-to("huge") {
+        .instructor_content {
+            width: 80%;
+            .instructor_text {
+                padding-left: 50px;
+            }
+        }
+    }
+    @include respond-to("large") {
+        .instructor_content {
+            .instructor_text {
+                padding-top: 50px;
+            }
+            .instructor_layout {
+                display: none;
+            }
+        }
+    }
+    @include respond-to("small") {
+        .instructor_content {
+            .instructor_item {
+                img {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

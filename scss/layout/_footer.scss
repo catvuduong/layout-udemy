@@ -1,0 +1,37 @@
+.myFooter {
+    margin-top: 30px;
+    border-top: 1px solid rgba($color: gray, $alpha: 0.1);
+    .footer_content {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        width: 100%;
+        .footer_index {
+            width: 100%;
+            padding-left: 50px;
+
+            .footer_item {
+                span {
+                    @include text($color-blue, $fs-1, $fw-normal);
+                    display: block;
+                    padding-bottom: $pd-1;
+                    letter-spacing: 0.5px;
+                    cursor: pointer;
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+        }
+        .footer_logo {
+            padding-top: 50px;
+            padding-left: 50px;
+            padding-right: 50px;
+            margin: auto;
+            justify-content: space-between;
+            img {
+                width: 115px;
+                cursor: pointer;
+            }
+        }
+    }
+}
